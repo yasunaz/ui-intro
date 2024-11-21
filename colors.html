@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Change Color Rectangle</title>
+    <style>
+      .rectangle {
+        width: 200px;
+        height: 100px;
+        background-color: lightgray;
+        margin: 20px auto;
+        border: 2px solid black;
+      }
+      .button {
+        display: block;
+        margin: 20px auto;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="rectangle" id="rectangle"></div>
+    <button class="button" onclick="changeColor()">Change Color</button>
+
+    <script>
+      function changeColor() {
+        const colors = ["red", "blue", "green", "yellow", "purple", "orange"];
+        const rectangle = document.getElementById("rectangle");
+        const randomColor = colors[Math.floor(Math.random() * colors.length)];
+        rectangle.style.backgroundColor = randomColor;
+      }
+    </script>
+  </body>
+</html>
